@@ -47,7 +47,7 @@ resource "azurerm_managed_disk" "disk3" {
   name                 = "disk3"
   location             = var.region
   resource_group_name  = var.rg
-  storage_account_type = "Premium_LRS"
+  storage_account_type = var.disk_type
   create_option        = "Empty"
   disk_size_gb         = var.sizeGB
 }
@@ -123,7 +123,7 @@ resource "azurerm_managed_disk" "disk8" {
   name                 = "disk8"
   location             = var.region
   resource_group_name  = var.rg
-  storage_account_type = "Premium_LRS"
+  storage_account_type = var.disk_type
   create_option        = "Empty"
   disk_size_gb         = var.sizeGB
 }
